@@ -1,6 +1,6 @@
 <?php
 
-if (isset($config_array)){
+if (!isset($config_array)){
     $config_array= array();
 }
 

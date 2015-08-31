@@ -7,8 +7,8 @@
         'author' => 'Spendel Péter, Soulware Ltd.',
         'description' => '',
         'icon' => '',
-        'is_uninstallable' => false,
-        'name' => 'SoulwareDashboardHandler',
+        'is_uninstallable' => FALSE,
+        'name' => 'SoulwareRelatedActivityField',
         'published_date' => '2015-08-31',
         'type' => 'module',
         'version' => '0.9.0',
@@ -33,48 +33,41 @@
                 "from" => "<basepath>/files/custom/Extension/modules/Opportunities/Ext/Vardefs/activities_modification_date.field.php", 
                 "to" => "custom/Extension/modules/Opportunities/Ext/Vardefs/activities_modification_date.field.php"
             ),
-            array(
-                "from" => "<basepath>/files/custom/modules/Calls/logic_hooks.php", 
-                "to" => "custom/modules/Calls/logic_hooks.php"
-            ),
+            
             array(
                 "from" => "<basepath>/files/custom/modules/Calls/activity_field_update.php", 
                 "to" => "custom/modules/Calls/activity_field_update.php"
             ),
-            array(
-                "from" => "<basepath>/files/custom/modules/Emails/logic_hooks.php", 
-                "to" => "custom/modules/Emails/logic_hooks.php"
-            ),
+            
             array(
                 "from" => "<basepath>/files/custom/modules/Emails/activity_field_update.php", 
                 "to" => "custom/modules/Emails/activity_field_update.php"
             ),
-            array(
-                "from" => "<basepath>/files/custom/modules/Meetings/logic_hooks.php", 
-                "to" => "custom/modules/Meetings/logic_hooks.php"
-            ),
+            
             array(
                 "from" => "<basepath>/files/custom/modules/Meetings/activity_field_update.php", 
                 "to" => "custom/modules/Meetings/activity_field_update.php"
             ),
-            array(
-                "from" => "<basepath>/files/custom/modules/Notes/logic_hooks.php", 
-                "to" => "custom/modules/Notes/logic_hooks.php"
-            ),
+            
             array(
                 "from" => "<basepath>/files/custom/modules/Notes/activity_field_update.php", 
                 "to" => "custom/modules/Notes/activity_field_update.php"
             ),
-            array(
-                "from" => "<basepath>/files/custom/modules/Tasks/logic_hooks.php", 
-                "to" => "custom/modules/Tasks/logic_hooks.php"
-            ),
+            
             array(
                 "from" => "<basepath>/files/custom/modules/Tasks/activity_field_update.php", 
                 "to" => "custom/modules/Tasks/activity_field_update.php"
             ),
             
         ),
+        'logic_hooks' => array(
+            array ('module'=>'Calls','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Calls/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
+            array ('module'=>'Emails','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Emails/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
+            array ('module'=>'Meetings','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Meetings/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
+            array ('module'=>'Notes','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Notes/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
+            array ('module'=>'Tasks','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Tasks/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
+        ),
+        
         'language'=> array (
             //Accounts
             array(
@@ -83,7 +76,7 @@
                 'language'=>'en_us'
             ),
 	    array(
-                'from'=> '<basepath>/files/custom/Extension/modules/Accounts/Ext/hu_hu.activities_modifiaction_date.lang.php',
+                'from'=> '<basepath>/files/custom/Extension/modules/Accounts/Ext/Language/hu_hu.activities_modifiaction_date.lang.php',
                 'to_module'=> 'Accounts',
                 'language'=>'hu_hu'
             ),
@@ -94,7 +87,7 @@
                 'language'=>'en_us'
             ),
 	    array(
-                'from'=> '<basepath>/files/custom/Extension/modules/Contacts/Ext/hu_hu.activities_modifiaction_date.lang.php',
+                'from'=> '<basepath>/files/custom/Extension/modules/Contacts/Ext/Language/hu_hu.activities_modifiaction_date.lang.php',
                 'to_module'=> 'Contacts',
                 'language'=>'hu_hu'
             ),
@@ -105,7 +98,7 @@
                 'language'=>'en_us'
             ),
 	    array(
-                'from'=> '<basepath>/files/custom/Extension/modules/Leads/Ext/hu_hu.activities_modifiaction_date.lang.php',
+                'from'=> '<basepath>/files/custom/Extension/modules/Leads/Ext/Language/hu_hu.activities_modifiaction_date.lang.php',
                 'to_module'=> 'Leads',
                 'language'=>'hu_hu'
             ),
@@ -116,7 +109,7 @@
                 'language'=>'en_us'
             ),
 	    array(
-                'from'=> '<basepath>/files/custom/Extension/modules/Opportunities/Ext/hu_hu.activities_modifiaction_date.lang.php',
+                'from'=> '<basepath>/files/custom/Extension/modules/Opportunities/Ext/Language/hu_hu.activities_modifiaction_date.lang.php',
                 'to_module'=> 'Opportunities',
                 'language'=>'hu_hu'
             ),
