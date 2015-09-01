@@ -5,7 +5,7 @@
             'regex_matches' => array('6.5.*'),
 	 ),
         'author' => 'Spendel Péter, Soulware Ltd.',
-        'description' => '',
+        'description' => 'This package 4 module (Accounts,Contacts,Leads,Opportunities) add Latest Activity field',
         'icon' => '',
         'is_uninstallable' => FALSE,
         'name' => 'SoulwareRelatedActivityField',
