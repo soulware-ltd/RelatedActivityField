@@ -1,7 +1,7 @@
 {
     "name": "soulware/related-activity-field",
     "description": "SugarCRM install and uninstall script to ",
-    "version": "0.9.1",
+    "version": "0.9.2",
     "license": "MIT",
     "require": {
         "php": ">=5.3.0",
