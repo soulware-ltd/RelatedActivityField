@@ -7,11 +7,11 @@
         'author' => 'Spendel Péter, Soulware Ltd.',
         'description' => 'This package 4 module (Accounts,Contacts,Leads,Opportunities) add Latest Activity field',
         'icon' => '',
-        'is_uninstallable' => FALSE,
+        'is_uninstallable' => TRUE,
         'name' => 'SoulwareRelatedActivityField',
         'published_date' => '2015-08-31',
         'type' => 'module',
-        'version' => '0.9.0',
+        'version' => '0.9.2',
     );
    
     $installdefs =array(
@@ -61,11 +61,11 @@
             
         ),
         'logic_hooks' => array(
-            array ('module'=>'Calls','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Calls/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
-            array ('module'=>'Emails','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Emails/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
-            array ('module'=>'Meetings','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Meetings/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
-            array ('module'=>'Notes','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Notes/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
-            array ('module'=>'Tasks','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Tasks/activity_field_update.php','class'=>'UpdateDate','function'=>'afterSaveUpdate',),
+            array ('module'=>'Calls','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Calls/activity_field_update.php','class'=>'UpdateDateCalls','function'=>'afterSaveUpdate',),
+            array ('module'=>'Emails','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Emails/activity_field_update.php','class'=>'UpdateDateEmails','function'=>'afterSaveUpdate',),
+            array ('module'=>'Meetings','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Meetings/activity_field_update.php','class'=>'UpdateDateMeetings','function'=>'afterSaveUpdate',),
+            array ('module'=>'Notes','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Notes/activity_field_update.php','class'=>'UpdateDateNotes','function'=>'afterSaveUpdate',),
+            array ('module'=>'Tasks','hook'=>'after_save','order'=>1,'description'=>'Update custom date field','file'=>'custom/modules/Tasks/activity_field_update.php','class'=>'UpdateDateTasks','function'=>'afterSaveUpdate',),
         ),
         
         'language'=> array (
